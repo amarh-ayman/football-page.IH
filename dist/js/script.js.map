@@ -1,1 +1,1 @@
-{"version":3,"sources":["script.js"],"names":["rotate","$","on","css"],"mappings":"AAAA,IAAIA,OAAS,GACbC,EAAE,+BAA+BC,GAAG,SAAS,WAC3CD,EAAE,+BAA+BE,IAAI,YAAa,UAAUH,eAC5DA,QAAU","file":"script.js"}
+{"version":3,"sources":["script.js"],"names":["rotate","$","on","css","e","preventDefault","removeClass","this","toggleClass"],"mappings":"AAAA,IAAIA,OAAS,GACbC,EAAE,+BAA+BC,GAAG,SAAS,WAC3CD,EAAE,+BAA+BE,IAAI,YAAa,UAAUH,eAC5DA,QAAU,MAGZC,EAAE,oBAAoBC,GAAG,SAAS,SAAUE,GAC1CA,EAAEC,iBACFJ,EAAE,oBAAoBK,YAAY,UAClCL,EAAEM,MAAMC,YAAY","file":"script.js"}

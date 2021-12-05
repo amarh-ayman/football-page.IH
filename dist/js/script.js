@@ -1,2 +1,2 @@
-let rotate=.5;$("#most-important-competition").on("click",(function(){$("#most-important-competition").css("transform",`rotate(${rotate}turn)`),rotate+=.5}));
+let rotate=.5;$("#most-important-competition").on("click",(function(){$("#most-important-competition").css("transform",`rotate(${rotate}turn)`),rotate+=.5})),$("footer .games li").on("click",(function(t){t.preventDefault(),$("footer .games li").removeClass("active"),$(this).toggleClass("active")}));
 //# sourceMappingURL=script.js.map
