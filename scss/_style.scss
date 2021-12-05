@@ -847,7 +847,7 @@ footer {
           align-items: center;
           justify-content: center;
           align-items: center;
-          // transform: skew(-30deg);
+          transform: skew(-30deg);
           height: 100%;
           width: 20%;
           &:first-child {
@@ -857,7 +857,7 @@ footer {
           a,
           i {
             text-align: center;
-            // transform: skew(50deg);
+            transform: skew(30deg);
             @include font-size-and-color(24px, 90, $white);
           }
         }
