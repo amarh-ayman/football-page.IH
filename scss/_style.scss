@@ -859,9 +859,13 @@ footer {
           }
           a,
           i {
+            padding-top: 10px;
             text-align: center;
             transform: skew(30deg);
             @include font-size-and-color(20px, 900, $white);
+          }
+          i {
+            width: 100%;
           }
         }
       }
