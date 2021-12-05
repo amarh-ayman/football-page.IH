@@ -756,9 +756,8 @@ footer {
   }
   nav {
     padding-bottom: 20px;
-    color: $white !important;
-    font-size: 16px;
-    text-align: end;
+
+    @include font-size-and-color(16px, 900, $white);
   }
 }
 
@@ -819,6 +818,56 @@ footer {
       }
     }
   }
+  footer {
+    height: 100px;
+    .container {
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .games {
+      border: none !important;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      ul {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        // transform: skew(-30deg);
+        .active {
+          background: rgba($pink, 0.2);
+          border-bottom: 3px solid $pink !important;
+        }
+        li {
+          border-left: $border !important;
+          border-color: $gray-light !important;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          align-items: center;
+          // transform: skew(-30deg);
+          height: 100%;
+          width: 20%;
+          &:first-child {
+            width: 30%;
+            transform: skewX(-30deg, 30deg);
+          }
+          a,
+          i {
+            text-align: center;
+            // transform: skew(50deg);
+            @include font-size-and-color(24px, 90, $white);
+          }
+        }
+      }
+      .navbar-toggler {
+        outline: none !important;
+        @include font-size-and-color(28px, 900, $white);
+      }
+    }
+  }
 }
 @media (min-width: 577px) and (max-width: 768px) {
   .container {
@@ -859,9 +908,6 @@ footer {
       .best-players {
         .players {
           justify-content: space-around !important;
-          .imgs {
-            // @include img-size(40px, 40px);
-          }
         }
       }
       .card-deck-group {

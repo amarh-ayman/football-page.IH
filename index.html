@@ -2215,23 +2215,44 @@
             </div>
           </div>
         </div>
-        <div class="games navbar border-bottom">
+        <div class="games navbar navbar-expand-lg border-bottom">
           <ul class="nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item active d-lg-none d-block">
+              <i class="far fa-futbol"></i>
+              <a href="#" class="nav-link"> الرئيسية</a>
+            </li>
+            <li class="nav-item">
+              <i class="far fa-futbol"></i>
               <a href="#" class="nav-link">كرة القدم</a>
             </li>
             <li class="nav-item">
+              <i class="far fa-futbol"></i>
               <a href="#" class="nav-link">كرة السلة</a>
             </li>
-            <li class="nav-item"><a href="#" class="nav-link">تنس</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">كرة اليد</a></li>
+            <li class="nav-item">
+              <i class="far fa-futbol"></i> <a href="#" class="nav-link">تنس</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">كرة اليد</a>
+            </li>
           </ul>
-          <a href="" class="navbar-brand">
+          <a href="" class="navbar-brand d-lg-flex d-none">
             winwin
             <img src="images/logo.png" alt="" />
           </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-chevron-up"></i>
+          </button>
         </div>
-        <div class="about-page d-flex justify-content-between">
+        <div class="about-page d-lg-flex d-none justify-content-between">
           <nav class="nav">
             <a class="nav-link active" href="#">عن الموقع</a>
             <a class="nav-link" href="#">تواصل معنا</a>
@@ -2240,6 +2261,7 @@
             <a class="nav-link" href="#">سياسة الخصوصية</a>
             <a class="nav-link" href="#">الشروط والاحكام</a>
           </nav>
+
           <nav class="nav social-media">
             <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
             <a class="nav-link" href="#"><i class="fab fa-youtube"></i></a>
@@ -2247,7 +2269,9 @@
             <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
           </nav>
         </div>
-        <nav>جميع الحقوق محفوظة &copy; WinWin.2020</nav>
+        <nav class="d-lg-flex d-none justify-content-end">
+          جميع الحقوق محفوظة &copy; WinWin.2020
+        </nav>
       </div>
     </footer>
     <script src="app/script.js"></script>
