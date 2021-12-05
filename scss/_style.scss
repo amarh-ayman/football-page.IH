@@ -1,0 +1,916 @@
+* {
+  font-family: "Amiri", serif;
+  border: none !important;
+  box-sizing: border-box;
+  padding: 0;
+  border-radius: 0;
+  text-align: right;
+  transition: 0.5s;
+  scroll-behavior: smooth;
+}
+
+.row {
+  margin: 0;
+}
+.navbar {
+  img {
+    @include img-size(110px, 60px);
+  }
+  a {
+    @include font-size-and-color(18px, 900, $white);
+  }
+}
+.header1 {
+  background: $dark !important;
+  .navbar-toggler {
+    span {
+      @include font-size-and-color(35px, 900, $green);
+    }
+  }
+
+  .icons {
+    i {
+      font-size: 25px;
+    }
+    .user {
+      color: $dark;
+      background-color: $white;
+      border-radius: 50%;
+      border: $border !important;
+    }
+  }
+}
+
+.header2 {
+  .active {
+    * {
+      color: $dark !important;
+    }
+  }
+  background: $green;
+  li {
+    margin-left: 15px;
+  }
+  a,
+  i {
+    @include font-size-and-color(15.5px, 900, $white);
+  }
+}
+.players {
+  background: $gray-light;
+  padding-top: 20px;
+  .card {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    img {
+      @include img-size(60px, 60px);
+      border-radius: 50%;
+      object-fit: cover;
+      transform: scale(1);
+    }
+    &-text {
+      @include font-size-and-color(15px, 900);
+    }
+  }
+}
+.more-news {
+  align-items: center;
+  margin-right: auto !important;
+  p,
+  i {
+    @include font-size-and-color(18px, 900, $gray);
+  }
+  i {
+    color: $dark;
+    padding-bottom: 1rem;
+    padding-right: 0.8rem;
+  }
+}
+.heading {
+  @include font-size-and-color(27px, 900, $gray-heading);
+  margin: 16px 0 20px;
+  p {
+    margin-left: 16px;
+  }
+  div {
+    padding: 0;
+    padding-top: 10px;
+    height: fit-content;
+    margin: 0;
+    display: flex;
+    i {
+      letter-spacing: -4px;
+      &:first-child {
+        color: $dark;
+      }
+      &:nth-child(2) {
+        color: rgba($dark, $alpha: 0.6);
+      }
+    }
+  }
+}
+.header-nav {
+  margin: 0;
+  margin-bottom: $margin-bottom;
+  background: $gray-light;
+  padding: 16px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  img {
+    @include img-size(55px, 55px);
+    border-radius: 50%;
+    margin-left: 20px;
+    object-fit: cover;
+  }
+  h2 {
+    @include font-size-and-color(18px, 900);
+  }
+}
+.big-img {
+  margin-bottom: $margin-bottom;
+  .card {
+    position: relative;
+  }
+  img {
+    @include img-size(inherit, 500px);
+    object-fit: cover;
+  }
+  .card-img-overlay {
+    @include flexing(column, flex-end, flex-start);
+    padding-right: 15px;
+    background: linear-gradient(
+      90deg,
+      rgba($black, 0.9),
+      rgba($black, 0.3),
+      rgba($dark, 1)
+    );
+    .card-text {
+      @include font-size-and-color(50px, 900, $white);
+      width: 70%;
+      line-height: 1;
+      padding: 2rem 0;
+    }
+  }
+}
+
+.blue-line {
+  .card {
+    // height: 30rem;
+    height: 300px;
+    img {
+      width: 100%;
+      height: inherit !important;
+    }
+  }
+  .card-img-overlay {
+    background: linear-gradient(
+      109deg,
+      rgba($dark, 0) 15% 62%,
+      rgba($dark, 0.7) 62% 65%,
+      rgba($dark, 1) 65%
+    );
+  }
+  // .card-text {
+  //   width: 95%;
+  //   font-size: 10px !important;
+  //   font-weight: 900;
+  //   // @include font-size-and-color(5px, 900);
+  // }
+}
+.card-title {
+  background: $green;
+  display: inline-block;
+  padding: 4px 9px;
+  border-radius: 0.3rem;
+  @include font-size-and-color(11px, 900, $white);
+}
+.card-deck-twoLines {
+  margin: 0 !important;
+  .card {
+    margin: 0;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    @include flexing(row, flex-start, flex-start);
+    img {
+      @include img-size(140px, 120px);
+      object-fit: cover;
+      object-position: 50% 100%;
+      border-radius: 0.5rem;
+    }
+    &-body {
+      padding: 0;
+      padding-right: 1.3rem;
+      height: 100%;
+      line-height: 1.2;
+    }
+    &-text {
+      padding-left: 1.8rem;
+      @include font-size-and-color(18px, 900);
+      small {
+        padding-left: 1rem;
+        @include font-size-and-color(11.5px, 900);
+        @include text-overFlow(2);
+      }
+    }
+  }
+}
+.who-wen {
+  background: linear-gradient(110deg, $black 50%, $blue 50%);
+  @include flexing(column, space-evenly, center);
+  nav {
+    @include font-size-and-color(25px, 900, $white);
+  }
+  .card {
+    background: transparent;
+    @include flexing(row, space-between, flex-start);
+    img {
+      @include img-size(80px, 80px);
+      border-radius: 50%;
+    }
+    &-text {
+      background: $white;
+      border-radius: 50%;
+      @include img-size(35px, 35px);
+      @include font-size-and-color(20px, 900);
+      @include flexing(row, center, center);
+    }
+    nav {
+      color: $dark;
+    }
+    .player {
+      @include flexing(column, flex-start, center);
+      h3 {
+        display: block;
+        align-items: center;
+        margin-top: 12px;
+        @include font-size-and-color(23px, 900);
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+    }
+  }
+}
+main {
+  margin-top: $margin-bottom;
+  .right-section {
+    section {
+      margin-bottom: $margin-bottom;
+    }
+
+    .card-text {
+      font-weight: 700;
+    }
+
+    .card-deck-group {
+      .card {
+        padding: 0;
+        img {
+          height: 200px;
+          object-fit: cover;
+          object-position: 50% 1%;
+        }
+        &-body {
+          border-top: 0.6rem solid $pink !important;
+          background: $dark;
+          p {
+            @include font-size-and-color(20px);
+            color: $white !important;
+            margin-bottom: 1rem;
+          }
+        }
+        &-text {
+          @include text-overFlow(2);
+        }
+      }
+    }
+
+    .best-players {
+      flex-direction: column;
+      .more-news {
+        justify-content: space-between;
+        p {
+          font-size: 30px;
+        }
+      }
+      .players {
+        background: none;
+
+        @include flexing(row, space-between);
+        padding: 0;
+        height: 240px;
+
+        overflow-y: hidden;
+        .card {
+          margin: 0;
+          margin-bottom: $margin-bottom;
+          align-items: center;
+          .imgs {
+            position: relative;
+            @include img-size(150px, 150px);
+            border-radius: 50%;
+            .card-img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 50%;
+            }
+            .badge {
+              background: transparent;
+              position: absolute;
+              bottom: -16px;
+              left: 0;
+              img {
+                @include img-size(60px, 60px);
+                @include border(7px);
+                border-radius: 50%;
+              }
+            }
+          }
+
+          &-text {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 18px;
+            color: $dark;
+          }
+        }
+      }
+    }
+    .importantGames {
+      height: fit-content;
+      background: none;
+      .card-team {
+        flex: 1 1 20px;
+        padding: 16px;
+        background: linear-gradient(90deg, rgba($gray, 0.8) 5%, $white);
+        box-shadow: 5px 5px 10px $gray;
+        border-top: 3px solid $dark !important;
+        border-radius: 2%;
+
+        margin: 6px;
+        * {
+          font-size: 18px;
+        }
+        .card {
+          margin: 0;
+          color: $dark;
+          &-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            @include flexing(column, flex-start, center);
+            p {
+              margin: 0;
+              font-size: 13px;
+            }
+            h3 {
+              @include font-size-and-color(20px, 900);
+            }
+            img {
+              @include img-size(25px, 25px);
+            }
+            nav {
+              margin-top: 50px;
+              display: flex;
+              align-items: center;
+              p {
+                margin-left: 10px;
+                margin-bottom: 13px;
+                display: block;
+                @include img-size(16px, 10px);
+                border-radius: 35%;
+                border: $border !important;
+                border-color: $dark !important;
+                box-shadow: 0 3px 0 $dark;
+              }
+            }
+          }
+          .player {
+            h3 {
+              font-size: 20px;
+            }
+          }
+        }
+        .nav-directions {
+          justify-content: space-between;
+
+          li {
+            text-align: center;
+            width: 36%;
+            color: $white;
+            &:first-child {
+              background: $pink;
+            }
+            &:nth-child(2) {
+              width: 25%;
+              color: $dark;
+              background: $gray;
+            }
+            &:last-child {
+              background: $dark;
+            }
+          }
+        }
+      }
+    }
+    .videos-section {
+      .big {
+        .card-img-overlay {
+          background: linear-gradient(
+            109deg,
+            rgba($dark, 1) 15%,
+            rgba($dark, 0.4) 15% 62%,
+            rgba($dark, 0.8) 62% 65%,
+            rgba($dark, 1) 65%
+          );
+        }
+      }
+      .card-deck-group {
+        .card-text {
+          font-size: 25px;
+        }
+      }
+    }
+
+    // ==========
+    .imgs-section {
+      .carousel-inner {
+        margin: 0;
+        * {
+          color: $white !important;
+        }
+        .card {
+          padding: 0;
+          .card-img-overlay {
+            background: linear-gradient(
+              90deg,
+              rgba($dark, 0.2) 50%,
+              rgba($dark, 0.9)
+            ) !important;
+          }
+        }
+        img {
+          width: 100%;
+          height: 420px;
+        }
+      }
+      .carousel-control-prev,
+      .carousel-control-next {
+        height: 420px;
+        span {
+          @include img-size(50px, 50px);
+          @include flexing(row, center, center);
+          background-color: $gray-light;
+          border-radius: 50%;
+          i {
+            color: $dark !important;
+            font-size: 30px;
+          }
+        }
+      }
+      // indicators  ,, imgs
+      .card-deck {
+        margin: 0;
+        position: relative;
+        .card {
+          margin: 1px;
+          padding: 0;
+          cursor: pointer;
+          img {
+            padding: 2px;
+            height: 100%;
+          }
+        }
+        .active {
+          outline: 2px solid $pink;
+        }
+      }
+    }
+  }
+  .left-section {
+    padding-right: 42px !important;
+    section {
+      margin: 0;
+      margin-bottom: $margin-bottom;
+    }
+    .header2-nav {
+      background: $dark;
+      padding: 12px;
+      * {
+        @include font-size-and-color(15px, 900, $white);
+      }
+    }
+    .header-nav {
+      margin-bottom: 0;
+      background: linear-gradient(
+        109deg,
+        rgba($gray-light, 0.8) 40%,
+        rgba($white, 1) 60%,
+        rgba(white, 0.8)
+      );
+      img {
+        @include img-size(30px, 30px);
+      }
+      h2 {
+        font-size: 15px;
+      }
+    }
+    .most-important-competition {
+      border: $border !important;
+      section {
+        margin: 0;
+        margin-bottom: 40px;
+        justify-content: center;
+      }
+      .dates {
+        font-size: 14px;
+        * {
+          color: $dark;
+        }
+        i {
+          font-size: 15px;
+        }
+        padding-bottom: 0 !important;
+      }
+      .collapse-sections {
+        overflow-y: scroll;
+        height: 135vh;
+        border-width: 3px !important;
+        padding: $rightSection-padding;
+      }
+      .competitions {
+        .card-deck {
+          align-items: center;
+          padding: 12px 0;
+          margin: 0;
+          width: 100%;
+          border-bottom: $border !important;
+
+          .card {
+            margin: 0;
+            padding: 0;
+            flex-direction: row;
+            align-items: center;
+            img {
+              @include img-size(30px, 30px);
+            }
+            &-body {
+              padding: 0;
+            }
+            &-title {
+              @include font-size-and-color(12px);
+              margin: 0;
+              // margin-left: 10px;
+              background-color: transparent;
+              color: $dark;
+              // ------------
+              text-overflow: ellipsis;
+              overflow: hidden;
+              display: -webkit-box !important;
+              -webkit-line-clamp: 0;
+              -webkit-box-orient: vertical;
+              white-space: normal;
+            }
+          }
+          .time {
+            @include font-size-and-color(12px, 900);
+            margin: 0 14px;
+          }
+        }
+      }
+    }
+    .second {
+      .card {
+        height: $rghtSection-img-height;
+        &-text {
+          font-size: 30px;
+        }
+      }
+    }
+    .logo-third-section {
+      background: $gray-light;
+      align-items: center;
+      justify-content: center;
+      height: $rghtSection-img-height;
+      .card {
+        background: transparent;
+        align-items: center;
+        img {
+          @include img-size(120px, 200px);
+          border-radius: 30% / 15%;
+          border: 2px solid $gray !important;
+        }
+        &-text {
+          @include font-size-and-color(25px);
+        }
+      }
+    }
+    .more-reading {
+      .header2-nav {
+        background: $pink;
+      }
+      .card-deck-twoLines {
+        .card {
+          padding: $rightSection-padding;
+
+          &:not(:last-child) {
+            border-bottom: $border !important;
+          }
+          img {
+            @include img-size(90px, 90px);
+          }
+          &-body {
+            @include text-overFlow(3);
+          }
+        }
+      }
+    }
+    .important-teams {
+      @include flexing(column, center, center);
+      padding: $rightSection-padding $rightSection-padding 0;
+      border: $border !important;
+      .header2-nav {
+        // padding: 2rem 0;
+        justify-content: center;
+        background: $pink;
+        h2 {
+          @include font-size-and-color(25px, 900);
+        }
+      }
+      .teams {
+        @include flexing(column, center, center);
+        margin: 0;
+        width: 100%;
+        padding: 0 $rightSection-padding;
+        .card {
+          margin: 0;
+          flex-direction: row;
+          align-items: center;
+          padding-top: 4px;
+          width: 100%;
+          &:not(:last-child) {
+            border-bottom: $border !important;
+          }
+          img {
+            width: 40px;
+            border-radius: 50%;
+          }
+          color: $dark;
+          * {
+            @include font-size-and-color(16px, 900);
+          }
+          &-body {
+            margin-left: auto;
+            .card-text {
+              font-weight: 900;
+            }
+          }
+        }
+      }
+    }
+    .my-story {
+      .card {
+        height: $rghtSection-img-height;
+        background: $green;
+        img {
+          height: 100%;
+        }
+        &-body {
+          position: absolute;
+          width: 100%;
+          height: 65%;
+          color: $white;
+          bottom: 0;
+        }
+        &-linear {
+          position: absolute;
+          width: 100%;
+          height: 60%;
+          top: 0;
+          left: 0;
+          background: linear-gradient(110deg, transparent 88.8%, $dark 88%);
+        }
+        &-text {
+          position: absolute;
+          width: 100%;
+          height: 40%;
+          bottom: 0;
+          left: 0;
+          background: linear-gradient(110deg, $dark 79%, transparent 79%);
+
+          @include font-size-and-color(40px, 900, $white);
+          @include flexing(row, center, center);
+        }
+      }
+    }
+    .who-wen {
+      height: calc($rghtSection-img-height - 80px);
+      .player {
+        h3 {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+footer {
+  margin-top: $margin-bottom;
+  background: $dark;
+  .players {
+    border-color: $pink !important;
+    background: transparent;
+    .card-text {
+      color: $white;
+    }
+  }
+  .games {
+    border-color: $pink !important;
+    .navbar-brand {
+      font-size: 30px;
+    }
+  }
+  .about-page {
+    margin-top: 15px;
+    .nav {
+      a {
+        color: $gray;
+        font-size: 15px;
+        font-weight: 800;
+      }
+    }
+    .social-media {
+      a {
+        background: $white;
+        border-radius: 50%;
+        color: $dark;
+        @include img-size(30px, 30px);
+        @include flexing(row, center, center);
+        margin-left: 10px;
+      }
+    }
+  }
+  nav {
+    padding-bottom: 20px;
+    color: $white !important;
+    font-size: 16px;
+    text-align: end;
+  }
+}
+
+// media queries=========================
+
+@media (max-width: 1200px) {
+  .card-deck-twoLines {
+    .card {
+      margin-top: 1rem;
+    }
+  }
+}
+@media (min-width: 992px) {
+  .right-section {
+    section {
+      border-bottom: $border !important;
+      border-width: 1px;
+    }
+
+    .card-deck-twoLines {
+      &:not(:last-child) {
+        border-bottom: $border !important;
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    .card-deck-twoLines {
+      border-bottom: none !important;
+      .card {
+        border-bottom: $border !important;
+      }
+
+      .card {
+        padding: 0 0 12px;
+      }
+    }
+    .imgs-section {
+      .card-deck {
+        // position: absolute;
+        top: 15px;
+        right: 50%;
+        .card {
+          @include img-size(10px, 10px);
+          background: transparent;
+          margin: 0 3px !important;
+          border-radius: 50%;
+          border: 1.5px solid $dark !important;
+          img {
+            display: none;
+          }
+        }
+        .active {
+          outline: none !important;
+          background: $dark;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .container {
+    max-width: 88%;
+
+    .card-deck-group {
+      // flex-direction: column;
+      .card {
+        flex: 1 1;
+        &:last-child {
+          margin-top: $margin-bottom;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    margin: 0;
+    padding: 0;
+    section {
+      &:not(:first-child) {
+        margin-left: 3%;
+        margin-right: 3%;
+      }
+      &:first-child {
+        .big-img {
+          // margin-bottom: 15px;
+        }
+        & > :not(:first-child) {
+          margin-left: 3%;
+          margin-right: 3%;
+        }
+      }
+    }
+
+    .right-section {
+      .best-players {
+        .players {
+          justify-content: space-around !important;
+          .imgs {
+            // @include img-size(40px, 40px);
+          }
+        }
+      }
+      .card-deck-group {
+        margin: 0;
+        width: 100%;
+        justify-content: center;
+      }
+      .card-deck-twoLines {
+        small {
+          display: none !important;
+        }
+        img {
+          @include img-size(90px, 90px);
+        }
+        .card-text {
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 350px) {
+  .right-section {
+    // .best-players {
+    //   .players {
+    //     justify-content: space-around !important;
+    //     .imgs {
+    //       width: 13rem !important;
+    //       height: 13rem !important;
+    //       margin-bottom: 1rem;
+    //     }
+    //   }
+    // }
+    // .importantGames {
+    //   * {
+    //     font-size: 1.8rem !important;
+    //   }
+    //   .card-team {
+    //     padding: 0.5rem !important;
+    //     .card {
+    //       height: 15rem !important;
+    //       margin: 0 !important;
+    //     }
+    //   }
+    // }
+  }
+}
+@media (max-width: 257px) {
+  .importantGames {
+    display: none !important;
+  }
+}
