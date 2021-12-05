@@ -858,7 +858,7 @@ footer {
           i {
             text-align: center;
             transform: skew(30deg);
-            @include font-size-and-color(24px, 90, $white);
+            @include font-size-and-color(20px, 900, $white);
           }
         }
       }
