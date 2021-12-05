@@ -854,6 +854,9 @@ footer {
             width: 30%;
             transform: skewX(-30deg, 30deg);
           }
+          &:hover {
+            background: rgba($color: $pink, $alpha: 0.5);
+          }
           a,
           i {
             text-align: center;
